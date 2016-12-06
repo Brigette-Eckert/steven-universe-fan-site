@@ -1,6 +1,6 @@
 #About
 
-Steven Universe Fan site build with Drupal 7 as part of self study following Epicodus curriculum.  Paired with LawlietBlack.
+Steven Universe Fan site built with Drupal 7 as part of self study following Epicodus curriculum.  Paired with LawlietBlack.
 
 # Instructions:
 
