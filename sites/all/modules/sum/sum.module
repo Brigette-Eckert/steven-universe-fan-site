@@ -21,13 +21,17 @@ function sum_form(){
       $form['left_number'] = array(
           "#title" => "Left Number",
           "#type" => 'textfield',
-          "#description" => t('Pick a number, any number!'),
+          "#description" => t('Pick a number, any number, between -9,999 & 9,999.'),
+          '#element_validate' => array('element_validate_number', 'element_validate_range'),
+          '#required' => TRUE,
       );
 
       $form['right_number'] =array(
           "#title" => "Right Number",
           "#type" => "textfield",
-          "#description" => t('Enter another number to add to the first one!'),
+          "#description" => t('Enter another number, between -9,999 & 9,999, to add to the first one!'),
+          '#element_validate' => array('element_validate_number', 'element_validate_range'),
+          '#required' => TRUE,
       );
     $form['submit'] = array(
         "#type" => 'submit',
@@ -36,6 +40,11 @@ function sum_form(){
     return $form;
 }
 
+function element_validate_range($element){
+    if($element['#value'] > 9999 || $element['#value'] < -9999){
+        form_error($element, t('Number must be less than 9,999 and greater than -9,999'));
+    }
+}
 
 function sum_form_submit($form, & $form_state){
     $first_number = $form_state['values']['left_number'];
