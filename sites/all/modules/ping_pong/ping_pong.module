@@ -2,7 +2,7 @@
 
 function ping_pong_menu(){
     $items['ping_pong'] = array(
-      'title' => 'Ping Pong Problem',
+      'title' => 'Ping Pong',
        'page callback' => 'drupal_get_form',
         'page arguments' => array('ping_pong_form'),
         'access callback' => TRUE,
@@ -62,5 +62,5 @@ function ping_pong_success(){
         $output = $output . '<li>' . $value . '</li>';
     }
     $output =  $output . '</ul>';
-    return 'Hooray! ' . $output;
+    return 'Hooray! ' . $output . '<div class="module-su-img"> <img src="/sites/all/modules/ping_pong/steve_star_eyes.png" title= "Steven is mesmerized the ping pong count" alt="starry eyed Steven"></div>';
 }

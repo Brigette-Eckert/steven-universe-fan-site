@@ -69,6 +69,7 @@ function title_case_success(){
     foreach ($_SESSION['title_cased_sentence'] as $value){
         $output = $output . $value;
     }
-    $output= $output . '</p>';
-    return $output;
+
+    $output = $output . '</p>';
+    return $output . '<div class="module-su-img"> <img src="/sites/all/modules/title_case/Stevonnie.jpg" title="Stevonnie Approves of Your Title Casing!" alt="Stevonni"> </div>';
 }

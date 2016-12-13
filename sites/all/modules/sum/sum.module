@@ -35,7 +35,7 @@ function sum_form(){
       );
     $form['submit'] = array(
         "#type" => 'submit',
-        '#value' => "calculate sum",
+        '#value' => "Calculate Sum",
     );
     return $form;
 }
@@ -56,5 +56,5 @@ function sum_form_submit($form, & $form_state){
 
 function sum_success(){
     $answer = $_SESSION['sum_output'];
-    return 'You calculated a sum! The answer is ' . $answer;
+    return 'You calculated a sum! The answer is ' . $answer . '<div class="module-su-img"> <img src="/sites/all/modules/sum/pearl_approves.png" title= "Pearl approves of this page\'s addition skills" alt="pearl standing"></div>';;
 }

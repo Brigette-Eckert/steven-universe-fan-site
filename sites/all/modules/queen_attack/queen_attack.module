@@ -2,7 +2,7 @@
 
 function queen_attack_menu(){
     $items['queen_attack']=array(
-        'title' => "Queen Attack!",
+        'title' => "Queen Attack",
         'page callback' => 'drupal_get_form',
         'page arguments' => array('queen_attack_form'),
         'access callback' => TRUE,
@@ -121,6 +121,7 @@ $y_difference = ($queen_y - $target_y);
 
 
 function attack_results(){
-        return '<p> Your Attack ' . $_SESSION['result'] . '! </p> </p><p> Queen Coords: ' . $_SESSION['queen_coords'] . '</p> <p> Target Coords: ' . $_SESSION['target_coords'] . '</p>';
+        return '<p> Your Attack ' . $_SESSION['result'] . '! </p> </p><p> Queen Coords: ' . $_SESSION['queen_coords'] . '</p> <p> Target Coords: ' . $_SESSION['target_coords'] . '</p> <div class="module-su-img"> <img src="/sites/all/modules/queen_attack/Rose_Quartz_With_Weapon.png" title= "The Queen, Rose Quartz, is read to attack!" alt="Rose Quartz with her Sword and Shield"></div>';
 
 }
+
