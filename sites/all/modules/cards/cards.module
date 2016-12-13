@@ -12,5 +12,5 @@ function cards_menu() {
 }
 
 function card_display($name) {
-    return 'HELLO ' . $name ;
+    return 'Hello ' . $name ;
 }

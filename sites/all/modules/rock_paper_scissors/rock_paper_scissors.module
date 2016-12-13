@@ -76,7 +76,7 @@ function player1_form_submit($form, &$form_state){
     $_SESSION['p1_choice'] =  $form_state['values']['player_one'];
     $form_state['redirect'] = 'rock_paper_scissors_player2';
 }
-//Do I need seperate submit functions for the two forms?
+
 function player2_form_submit($form, &$form_state){
 $p1_choice = $_SESSION['p1_choice'];
 $p2_choice = $form_state['values']['player_two'];

@@ -19,7 +19,7 @@ function queen_attack_menu(){
 
 //chess board 8x8 so coordinates 1-8 for each side
 function queen_attack_form(){
-    $form["queen_coordinates_x"] = array(
+    $form['queen_coordinates_x'] = array(
         '#title' => 'Queen Horizontal Coordinate',
         '#type' => 'select',
         "#options" => array(
@@ -63,6 +63,8 @@ function queen_attack_form(){
             8
         ),
         '#description' => t('Enter the horizontal coordinate for the target piece'),
+        '#element_validate' => array('not_same_start'),
+
     );
     $form['target__coordinates_y']= array(
         '#title' => 'Target Vertical Coordinate',
@@ -78,6 +80,7 @@ function queen_attack_form(){
             8
         ),
         '#description' => t('Enter the vertical coordinate for the target piece'),
+        '#element_validate' => array('not_same_start'),
     );
 
     $form['submit'] = array(
@@ -88,6 +91,23 @@ function queen_attack_form(){
     return $form;
 }
 
+
+//testing that starting location isn't the same
+function not_same_start($form, &$form_state){
+    $queen_x = $form_state['values']['queen_coordinates_x'];
+    $queen_y = $form_state['values']['queen_coordinates_y'];
+    $target_x = $form_state['values']['target__coordinates_x'];
+    $target_y = $form_state['values']['target__coordinates_y'];
+
+    $queen_coords =  $queen_x . ' ,' . $queen_y;
+    $target_coords = $target_x . ' ,' . $target_y;
+
+    if($queen_coords == $target_coords){
+        form_error($form, t('Starting Coordinates for Queen and Target Cannot be the Same'));
+    }
+
+
+}
 
 function queen_attack_form_submit($form, &$form_state){
 $queen_x = $form_state['values']['queen_coordinates_x'];
