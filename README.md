@@ -121,5 +121,21 @@ Steven Universe Fan site built with Drupal 7 as part of self study following Epi
  4. As a user, I can see a list of numbers, up to the number I selected, that replaces numbers divisble by 3 with 'ping', numbers divisible by 5 with 'pong' and numbers divisble by both with 'ping-pong'
 
 
+#What I learned from this project
+1. I learned how to make custom modules.
+
+2. Praticed creating basic and custom content in drupal. 
+
+3. Praticed making multiple user roles and setting permissions.  
+
+4. Praticed using several common modules including: view, css injection, comments sweaver and contact.
+
+5.  Praticed using themes 
+
+6. Learned how to create and use forms in drupal, including element validation. 
+
 #To Do
 Figure out Cookie to store user role to present custome logout message based on user role
+
+Add character bio pages for Gems, Steven, Greg and Connie
+
